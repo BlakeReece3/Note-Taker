@@ -18,6 +18,10 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/api/notes', (req, res) => {
+  const saves = db
+  res.json(saves)
+});
 
 
 
